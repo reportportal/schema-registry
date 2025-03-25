@@ -1,0 +1,20 @@
+[
+  {
+    "icon": {
+      "type": "url",
+      "content": "/path/to/icon.png"
+    }
+  },
+  {
+    "icon": {
+      "type": "base64",
+      "content": "data:image/png;base64,AsdAD="
+    }
+  },
+  {
+    "icon": {
+      "type": "svg",
+      "content": "<svg>...</svg>"
+    }
+  }
+]

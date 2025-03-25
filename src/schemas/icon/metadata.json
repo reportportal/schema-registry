@@ -1,0 +1,10 @@
+{
+  "name": "Icon Metadata",
+  "description": "The schema for the metadata of an icon.",
+  "version": "1.0.0",
+  "author": "ReportPortal",
+  "license": "Apache-2.0",
+  "createdAt": "2025-03-25",
+  "updatedAt": "2025-03-25",
+  "schemaUrl": "https://reportportal.io/schema-registry/schemas/icon/schema.json"
+}
