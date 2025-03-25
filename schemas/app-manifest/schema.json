@@ -1,8 +1,8 @@
 {
-  "$id": "https://reportportal.io/schema-registry/schemas/remote-plugin/schema.json",
+  "$id": "https://reportportal.io/schema-registry/schemas/app-manifest/schema.json",
   "$schema": "https://json-schema.org/draft-07/schema",
   "title": "Remote Plugin Manifest",
-  "description": "The schema for the manifest of a remote plugin.",
+  "description": "The schema for the manifest of a remote application.",
   "type": "object",
   "additionalProperties": false,
   "properties": {

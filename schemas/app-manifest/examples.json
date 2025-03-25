@@ -1,5 +1,5 @@
 {
-  "$schema": "https://reportportal.io/schema-registry/schemas/remote-plugin/schema.json",
+  "$schema": "https://reportportal.io/schema-registry/schemas/app-manifest/schema.json",
   "manifestVersion": "1.0",
   "id": "app-name",
   "name": "App Name",
