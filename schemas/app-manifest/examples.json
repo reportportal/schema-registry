@@ -11,8 +11,9 @@
   },
   "documentation": "http://example.com/docs",
   "license": "Apache-2.0",
-  "icons": {
-    "color": "https://example.com/path/to/color/icon.png"
+  "icon": {
+    "type": "url",
+    "content": "/path/to/icon.jpg"
   },
   "baseUrl": "https://example.com",
   "permissions": {

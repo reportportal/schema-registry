@@ -60,22 +60,13 @@
       "$ref": "#/$defs/spdx",
       "description": "The license for the app. This should be a valid SPDX license (https://spdx.org/licenses/) identifier."
     },
-    "icons": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "color": {
-          "$ref": "#/$defs/webUrl",
-          "description": "The url to the color icon for the app."
-        }
-      },
-      "required": [
-        "color"
-      ]
-    },
     "baseUrl": {
       "$ref": "#/$defs/webUrl",
       "description": "The base url for the app."
+    },
+    "icon": {
+      "$ref": "https://reportportal.io/schema-registry/schemas/icon/schema.json",
+      "description": "The icon for the app. It's used as a application icon in the UI."
     },
     "permissions": {
       "type": "object",

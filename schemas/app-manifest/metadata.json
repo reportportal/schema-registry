@@ -1,6 +1,6 @@
 {
-  "name": "Remote Plugin Manifest",
-  "description": "The schema for the manifest of a remote plugin.",
+  "name": "Remote application manifest",
+  "description": "The schema for the manifest of a remote application.",
   "version": "1.0.0",
   "author": "ReportPortal",
   "license": "Apache-2.0",
