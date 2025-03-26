@@ -131,7 +131,8 @@
     "developer",
     "name",
     "description",
-    "icons"
+    "icon",
+    "modules"
   ],
   "$defs": {
     "relativePath": {
