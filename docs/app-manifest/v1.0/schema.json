@@ -1,14 +1,13 @@
 {
   "$id": "https://reportportal.io/schema-registry/app-manifest/v1.0/schema.json",
-  "$schema": "https://json-schema.org/draft-07/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Remote Plugin Manifest",
   "description": "The schema for the manifest of a remote application.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "$schema": {
-      "type": "string",
-      "format": "uri"
+      "$ref": "#/$defs/uri"
     },
     "manifestVersion": {
       "type": "string",
@@ -17,8 +16,7 @@
     },
     "id": {
       "$ref": "#/$defs/slug",
-      "description": "A unique identifier for this app.",
-      "maxLength": 32
+      "description": "A unique identifier for this app."
     },
     "name": {
       "type": "string",
@@ -147,6 +145,11 @@
     "modules"
   ],
   "$defs": {
+    "uri": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^https?://.*"
+    },
     "relativePath": {
       "type": "string",
       "maxLength": 2048,
@@ -171,7 +174,80 @@
       "pattern": "^[a-zA-Z0-9-.]+$"
     },
     "icon": {
-      "$ref": "https://reportportal.io/schema-registry/icon/v1.0/schema.json"
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "url",
+            "base64",
+            "svg"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "description": "The content of the icon. If type is url, this should be a relative file path. If type is base64, this should be a base64 encoded image. If type is svg, this should be an svg string."
+        }
+      },
+      "required": [
+        "type",
+        "content"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "url"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "type": "string",
+                "maxLength": 2048,
+                "pattern": "^/.*"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "base64"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "type": "string",
+                "pattern": "^data:image/(png|jpeg|gif);base64,[A-Za-z0-9+/]+={0,2}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "svg"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "type": "string",
+                "pattern": "^<svg.*</svg>$"
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }
