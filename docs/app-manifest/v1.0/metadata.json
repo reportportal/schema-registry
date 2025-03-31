@@ -1,10 +1,10 @@
 {
   "name": "Remote application manifest",
   "description": "The schema for the manifest of a remote application.",
-  "version": "1.0.0",
+  "version": "1.0",
   "author": "ReportPortal",
   "license": "Apache-2.0",
   "createdAt": "2025-03-25",
   "updatedAt": "2025-03-25",
-  "schemaUrl": "https://reportportal.io/schema-registry/schemas/app-manifest/schema.json"
+  "schemaUrl": "https://reportportal.io/schema-registry/schemas/app-manifest/v1.0/schema.json"
 }

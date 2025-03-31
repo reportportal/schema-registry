@@ -1,5 +1,5 @@
 {
-  "$schema": "https://reportportal.io/schema-registry/schemas/app-manifest/schema.json",
+  "$schema": "https://reportportal.io/schema-registry/schemas/app-manifest/v1.0/schema.json",
   "manifestVersion": "1.0",
   "id": "app-name",
   "name": "App Name",
@@ -10,6 +10,7 @@
     "websiteUrl": "https://example.com"
   },
   "documentation": "http://example.com/docs",
+  "group": "bts",
   "license": "Apache-2.0",
   "icon": {
     "type": "url",
