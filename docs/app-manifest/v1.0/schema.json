@@ -76,7 +76,7 @@
       "description": "The base url for the app."
     },
     "icon": {
-      "$ref": "https://reportportal.io/schema-registry/icon/v1.0/schema.json",
+      "$ref": "#/$defs/icon",
       "description": "The icon for the app. It's used as a application icon in the UI."
     },
     "permissions": {
@@ -121,7 +121,7 @@
                 "description": "A relative file path to the project page."
               },
               "icon": {
-                "$ref": "https://reportportal.io/schema-registry/schemas/icon/schema.json"
+                "$ref": "#/$defs/icon"
               }
             },
             "required": [
@@ -169,6 +169,9 @@
     "spdx": {
       "type": "string",
       "pattern": "^[a-zA-Z0-9-.]+$"
+    },
+    "icon": {
+      "$ref": "https://reportportal.io/schema-registry/icon/v1.0/schema.json"
     }
   }
 }
