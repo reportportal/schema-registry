@@ -1,14 +1,13 @@
 {
   "$id": "https://reportportal.io/schema-registry/app-manifest/v1.0/schema.json",
-  "$schema": "https://json-schema.org/draft-07/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Remote Plugin Manifest",
   "description": "The schema for the manifest of a remote application.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "$schema": {
-      "type": "string",
-      "format": "uri"
+      "$ref": "#/$defs/uri"
     },
     "manifestVersion": {
       "type": "string",
@@ -17,8 +16,7 @@
     },
     "id": {
       "$ref": "#/$defs/slug",
-      "description": "A unique identifier for this app.",
-      "maxLength": 32
+      "description": "A unique identifier for this app."
     },
     "name": {
       "type": "string",
@@ -76,7 +74,7 @@
       "description": "The base url for the app."
     },
     "icon": {
-      "$ref": "#/$defs/icon",
+      "$ref": "https://reportportal.io/schema-registry/icon/v1.0/schema.json#/icon",
       "description": "The icon for the app. It's used as a application icon in the UI."
     },
     "permissions": {
@@ -121,7 +119,7 @@
                 "description": "A relative file path to the project page."
               },
               "icon": {
-                "$ref": "#/$defs/icon"
+                "$ref": "https://reportportal.io/schema-registry/icon/v1.0/schema.json#/icon"
               }
             },
             "required": [
@@ -147,6 +145,11 @@
     "modules"
   ],
   "$defs": {
+    "uri": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^https?://.*"
+    },
     "relativePath": {
       "type": "string",
       "maxLength": 2048,
@@ -169,9 +172,6 @@
     "spdx": {
       "type": "string",
       "pattern": "^[a-zA-Z0-9-.]+$"
-    },
-    "icon": {
-      "$ref": "https://reportportal.io/schema-registry/icon/v1.0/schema.json"
     }
   }
 }
