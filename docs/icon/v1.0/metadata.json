@@ -6,5 +6,5 @@
   "license": "Apache-2.0",
   "createdAt": "2025-03-25",
   "updatedAt": "2025-03-25",
-  "schemaUrl": "https://reportportal.io/schema-registry/schemas/icon/v1.0/schema.json"
+  "schemaUrl": "https://reportportal.io/schema-registry/icon/v1.0/schema.json"
 }
