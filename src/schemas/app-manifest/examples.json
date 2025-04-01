@@ -5,12 +5,12 @@
   "name": "App Name",
   "version": "1.0.0",
   "description": "A description of the app",
+  "group": "other",
   "developer": {
     "name": "Publisher Name",
     "websiteUrl": "https://example.com"
   },
   "documentation": "http://example.com/docs",
-  "group": "bts",
   "license": "Apache-2.0",
   "icon": {
     "type": "url",

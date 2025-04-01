@@ -140,8 +140,9 @@
     "developer",
     "name",
     "description",
-    "group",
     "icon",
+    "permissions",
+    "baseUrl",
     "modules"
   ],
   "$defs": {
