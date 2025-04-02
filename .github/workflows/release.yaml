@@ -17,7 +17,7 @@ jobs:
       - name: Publish schemas
         run: |
           echo "Publishing schemas..."
-          make release
+          make publish
       
       - name: Commit changes
         run: |
