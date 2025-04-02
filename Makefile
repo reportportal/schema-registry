@@ -4,7 +4,7 @@ REGISTRY_URL := https://schema.reportportal.io
 PUBLISH_DIR := docs
 TARGET := manifest.json
 
-all: publish
+all: bundle
 
 bundle:
 	@for file in src/schemas/${TARGET}; do \
@@ -14,13 +14,13 @@ bundle:
 		cp $$file ${PUBLISH_DIR}/$$base_filename.v${MAJOR_VERSION}.schema.json; \
 	done
 
-identify: bundle
+identify:
 	@for file in ${PUBLISH_DIR}/*.schema.json; do \
 		echo "Running identify for $$file"; \
 		npm run identify -- $$file ${REGISTRY_URL} docs; \
 	done
 
-metadata: identify
+metadata:
 	@for file in ${PUBLISH_DIR}/*.schema.json; do \
 		filename=$$(basename $$file); \
 		if [ "$${filename##*.v*.schema.json}" != "$$filename" ] && [ "$${filename##*.v${MAJOR_VERSION}.schema.json}" = "$$filename" ]; then \
@@ -34,5 +34,3 @@ metadata: identify
 			-a "ReportPortal"; \
 		fi \
 	done
-
-publish: metadata
