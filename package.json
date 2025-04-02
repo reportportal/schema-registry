@@ -1,0 +1,30 @@
+{
+  "name": "schema-registry",
+  "version": "1.0.0",
+  "description": "This is a simple schema registry that allows you to retrieve schemas.",
+  "bin": {
+    "schema": "./index.js"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "bundle": "node ./index.js bundle",
+    "identify": "node ./index.js identify",
+    "metadata": "node ./index.js metadata"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reportportal/schema-registry.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reportportal/schema-registry/issues"
+  },
+  "homepage": "https://github.com/reportportal/schema-registry#readme",
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}

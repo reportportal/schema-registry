@@ -54,3 +54,5 @@ function bundleSchemas(mainSchemaPath, outputPath) {
   fs.writeFileSync(outputPath, JSON.stringify(bundledSchema, null, 2));
   console.log(`Bundled schema written to ${outputPath}`);
 }
+
+module.exports = { bundleSchemas };
