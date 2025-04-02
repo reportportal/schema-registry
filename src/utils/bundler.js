@@ -54,8 +54,3 @@ function bundleSchemas(mainSchemaPath, outputPath) {
   fs.writeFileSync(outputPath, JSON.stringify(bundledSchema, null, 2));
   console.log(`Bundled schema written to ${outputPath}`);
 }
-
-bundleSchemas(
-  path.join(__dirname, '../schemas/app-manifest/schema.json'),
-  path.join(__dirname, '../../docs/app-manifest/v1.0/schema.json')
-);
