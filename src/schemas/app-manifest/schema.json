@@ -175,7 +175,7 @@
       "pattern": "^[a-zA-Z0-9-.]+$"
     },
     "icon": {
-      "$ref": "https://schema.reportportal.io/icon/v1.0/schema.json"
+      "$ref": "../icon/schema.json"
     }
   }
 }
