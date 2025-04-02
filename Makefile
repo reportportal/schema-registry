@@ -1,4 +1,4 @@
-VERSION := ${shell git describe --tags --abbrev=0}
+VERSION := 1.0
 MAJOR_VERSION := $(shell echo $(VERSION) | cut -d. -f1)
 REGESTRY_URL := https://schema.reportportal.io
 PUBLISH_DIR := docs
