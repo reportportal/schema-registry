@@ -1,6 +1,6 @@
 VERSION := 1.0
 MAJOR_VERSION := $(shell echo $(VERSION) | cut -d. -f1)
-REGESTRY_URL := https://schema.reportportal.io
+REGISTRY_URL := https://schema.reportportal.io
 PUBLISH_DIR := docs
 TARGET := manifest.json
 
@@ -17,7 +17,7 @@ bundle:
 identify: bundle
 	@for file in ${PUBLISH_DIR}/*.schema.json; do \
 		echo "Running identify for $$file"; \
-		npm run identify -- $$file ${REGESTRY_URL} docs; \
+		npm run identify -- $$file ${REGISTRY_URL} docs; \
 	done
 
 metadata: identify
