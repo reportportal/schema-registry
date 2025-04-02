@@ -40,14 +40,12 @@ program
   .description('Generate metadata for a schema file')
   .argument('<filePath>', 'Path to the schema file')
   .argument('<outputPath>', 'Path where to save the metadata')
-  .option('-v, --version <version>', 'Schema version', '1.0')
   .option('-a, --author <author>', 'Schema author')
   .option('-l, --license <license>', 'Schema license', 'Apache-2.0')
   .action((filePath, outputPath, options) => {
     console.log(`Generating metadata for schema ${filePath}...`);
     try {
       const metadata = generateMetadata(filePath, outputPath, {
-        version: options.version,
         author: options.author,
         license: options.license
       });
