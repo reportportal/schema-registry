@@ -1,5 +1,5 @@
 {
-  "$schema": "../schemas/manifest.schema.json",
+  "$schema": "https://schema.reportportal.io/manifest.schema.json",
   "manifestVersion": "1.0",
   "id": "app-name",
   "name": "App Name",
