@@ -52,7 +52,7 @@
           "description": "The display name for the developer.",
           "maxLength": 32
         },
-        "websiteUrl": {
+        "url": {
           "$ref": "#/$defs/webUrl",
           "description": "The url to the page that provides more information about the developer."
         }
