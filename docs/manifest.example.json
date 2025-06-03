@@ -28,7 +28,7 @@
         "url": "/index",
         "icon": {
           "type": "url",
-          "content": "/path/to/icon.png"
+          "content": "https://cdn.example.com/path/to/icon.png"
         }
       },
       {
