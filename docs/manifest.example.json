@@ -14,7 +14,7 @@
   "license": "Apache-2.0",
   "icon": {
     "type": "url",
-    "content": "/path/to/icon.jpg"
+    "content": "https://cdn.example.com/path/to/icon.jpg"
   },
   "baseUrl": "https://example.com",
   "permissions": {
