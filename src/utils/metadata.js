@@ -22,7 +22,17 @@ function generateMetadata(schemaFilePath, metadataFilePath, options = {}) {
 
     const schemaContent = fs.readFileSync(schemaFilePath, 'utf8');
     const schema = JSON.parse(schemaContent);
-    const metadata = getMetadata(schema, options);
+    
+    let createdAt = null;
+
+    if (fs.existsSync(metadataFilePath)) {
+      try {
+      const existingMetadata = JSON.parse(fs.readFileSync(metadataFilePath, 'utf8'));
+      createdAt = existingMetadata.createdAt;
+      } catch (error) {}
+    }
+
+    const metadata = getMetadata(schema, { ...options, createdAt });
 
     fs.writeFileSync(metadataFilePath, JSON.stringify(metadata, null, 2), 'utf8');
     return metadata;
@@ -56,6 +66,7 @@ function getMetadata(schema, options = {}) {
   const license = options.license || "Apache-2.0";
   
   const currentDate = new Date().toISOString().split('T')[0];
+  const createdAt = options.createdAt || currentDate;
   
   return {
     name,
@@ -63,7 +74,7 @@ function getMetadata(schema, options = {}) {
     version,
     author,
     license,
-    createdAt: currentDate,
+    createdAt: createdAt,
     updatedAt: currentDate,
     ...(schemaUrl && { schemaUrl })
   };

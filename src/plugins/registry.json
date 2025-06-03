@@ -1,0 +1,25 @@
+{
+  "plugins" : [
+    {
+      "name": "mobitru",
+      "title": "Mobitru",
+      "description": "A plugin for Mobitru integration",
+      "version": "1.0.0",
+      "author": "EPAM Systems",
+      "license": "EPAM Proprietary License",
+      "tags": ["mobile", "testing"],
+      "_links": {
+          "self": {
+              "href": "https://schema.reportportal.io/plugins/mobitru/manifest.json"
+          },
+          "manifest": {
+              "href": "https://schema.reportportal.io/plugins/mobitru/manifest.json"
+          },
+          "icon": {
+              "href": "https://schema.reportportal.io/plugins/mobitru/icon.png"
+          }
+      }
+    }
+  ],
+  "last_updated": "2023-10-01T12:00:00Z"
+}

@@ -4,14 +4,14 @@ REGISTRY_URL := https://schema.reportportal.io
 PUBLISH_DIR := docs
 TARGET := manifest
 
-all: bundle
+all: publish
 
 bundle:
 	@for file in src/schemas/${TARGET}.json; do \
 		base_filename=$$(basename $$file .json); \
 		echo "Running bundle for $$file"; \
 		npm run bundle -- $$file ${PUBLISH_DIR}/$$base_filename.schema.json; \
-		cp $$file ${PUBLISH_DIR}/$$base_filename.v${MAJOR_VERSION}.schema.json; \
+		npm run bundle -- $$file ${PUBLISH_DIR}/$$base_filename.v${MAJOR_VERSION}.schema.json; \
 	done
 
 identify:
@@ -29,3 +29,5 @@ metadata:
 		${PUBLISH_DIR}/$$base_filename.metadata.json \
 		-a "ReportPortal"; \
 	done
+
+publish: bundle identify metadata
