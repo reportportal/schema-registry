@@ -25,6 +25,8 @@
       {
         "slug": "my-project-page",
         "name": "My Project Page",
+        "title": "Project Page",
+        "menuOrder": 25,
         "url": "/index",
         "icon": {
           "type": "url",
@@ -47,6 +49,19 @@
         "icon": {
           "type": "svg",
           "content": "<svg>...</svg>"
+        }
+      }
+    ],
+    "adminPages": [
+      {
+        "slug": "my-admin-page",
+        "name": "My Admin Page",
+        "title": "Admin Page",
+        "menuOrder": 50,
+        "url": "/admin",
+        "icon": {
+          "type": "url",
+          "content": "https://cdn.example.com/path/to/admin-icon.png"
         }
       }
     ]
